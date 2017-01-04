@@ -38,9 +38,9 @@ html, body {
 }
 
 svg {
-  padding: 150px;
+  padding: 100px;
   width: 100%;
-  man-width: 40px;
+  max-width: 40px;
   height: 40px;
 }
 svg .sun {
@@ -54,7 +54,7 @@ svg .sun {
   font-size: 35px;
   border-style: none;
   position: absolute;
-  top: 350px;
+  top: 300px;
   bottom: 50px;
   margin-left: 103px;
   text-align: center;
@@ -74,7 +74,7 @@ hr.style1 {
   font-size: 20px;
   border-style: none;
   position: absolute;
-  top: 580px;
+  top: 500px;
   bottom: 50px;
   margin-left: 85px;
   text-align: center;
@@ -86,7 +86,7 @@ hr.style1 {
 .fa-facebook-square {
   border: none;
   position: absolute;
-  top: 630px;
+  top: 550px;
   margin-left: -100px;
   color: #6D6B72;
 }
