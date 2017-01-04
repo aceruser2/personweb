@@ -14,7 +14,7 @@ html, body {
 }
 
 .bottom {
-  height: 768px;
+  height: 720px;
   padding: 0px;
   margin: 0px;
   font-size: 0;
@@ -22,7 +22,7 @@ html, body {
 
 .left, .right {
   display: inline-block;
-  height: 768px;
+  height: 720px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -40,7 +40,7 @@ html, body {
 svg {
   padding: 100px;
   width: 100%;
-  max-width: 40px;
+  man-width: 40px;
   height: 40px;
 }
 svg .sun {
@@ -202,7 +202,7 @@ hr.style3 {
 
 .title {
   color: #6D6B72;
-  left: -340px;
+  left: -320px;
   line-height: 21px;
   letter-spacing: 0.5px;
   font-weight: bold;
