@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Resume-border</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+<div id="app">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
+  <div class="bottom">
+    <div class="left">
+      <svg veiewbox="-50 -50 100 100">
+        <circle class="sun" cx="0" cy="0" r="35"></circle>
+      </svg>
+      <div class="name">蔡宗翰   <br/>(cai zong han)</div>
+      <hr class="style1"/>
+      <div class="contact">CONTACT</div><a class="fa fa-facebook-square" aria-hidden="true" style="font-size:30px" href="https://www.facebook.com/profile.php?id=100003530897718&amp;fref=pb&amp;hc_location=friends_tab&amp;pnref=friends.all&amp;__mref=message_bubble" target="_blank"></a>
+      <div class="fbcontact"></div>
+      <div class="email"> </div>
+      <div class="phone"> </div>
+    </div>
+    <div class="right"><i class="fa fa-user" style="font-size:25px"></i>
+      <div class="profile"> github程式連結 </div>
+      <hr class="style2"/>
+      <div class="intro">
+        <ul>
+          <li class="content"> <a href="https://github.com/aceruser2" target="_blank">my github</a></li>
+        </ul>
+      </div><i class="fa fa-pencil-square-o" style="font-size:27px"></i>
+      <div class="experience">EXPERIENCE</div>
+      <hr class="style3"/>
+      <p class="title">python自學經歷
+        <ul> 
+          <li class="l" v-for="data in import"> {{data}}</li>
+        </ul>
+      </p><i class="fa fa-graduation-cap" style="font-size:26px"></i>
+      <div class="education">EDUCATION</div>
+      <hr class="style3"/>
+      <p class="p" v-for="(l,s) in school">{{l}} {{s}}</p><i class="fa fa-laptop" style="font-size:26px"></i><i class="fa fa-trophy" style="font-size:27px"></i>
+      <div class="certificate">CERTIFICATE</div>
+      <hr class="style3"/>
+      <div class="exper1"> CERTIFICATE
+        <ul>
+          <li class="l">Intro to Python for Data Science from datacamp</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
