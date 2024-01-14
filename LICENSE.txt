@@ -1,6 +1,7 @@
-MIT License
+The MIT License (MIT)
 
-Copyright (c) 2017 aceruser2
+Copyright (c) 2024 cai zong han (https://codepen.io/acer2/pen/QdWGmm)
+Fork of an original work Resume-border (https://codepen.io/acer2/pen/QdWGmm)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,0 +1,49 @@
+#app
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
+  .bottom
+    .left
+      .name
+        |蔡宗翰   
+        br
+        |(cai zong han)
+      hr.style1
+      .contact CONTACT
+      a.fa.fa-github(aria-hidden='true', style='font-size:30px;')(href="https://github.com/aceruser2" target="https://github.com/aceruser2")
+      
+
+    .right
+      i.fa.fa-user(style='font-size:25px')
+      .profile  自我介紹
+      hr.style
+      .intro
+        ul
+          li.content 畢業於能源領域
+          li.content python後端3年經驗
+          li.content java兩年經驗
+          li.content 開發環境mac or linux
+
+
+      i.fa.fa-pencil-square-o(style='font-size:27px')
+      .experience EXPERIENCE
+      hr.style2
+      .intro2
+        ul 
+          li.l(v-for="data in import")  {{data}}
+
+      i.fa.fa-graduation-cap(style='font-size:26px')
+      .education EDUCATION
+      hr.style2
+      .intro2
+        ul
+          li.l(v-for="(l,s) in school") {{l}} {{s}}
+       
+      i.fa.fa-laptop(style='font-size:26px')
+     
+     
+              
+      i.fa.fa-trophy(style='font-size:27px')
+      .certificate CERTIFICATE
+      hr.style2
+      .intro2
+        ul
+          li.l Linguaskill Business A2
