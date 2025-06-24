@@ -16,13 +16,7 @@ function showTab(tabName) {
             event.target.classList.add('active');
         }
 
-        // 照片點擊放大功能
-        document.querySelectorAll('.photo-item').forEach(item => {
-            item.addEventListener('click', function() {
-                // 這裡可以添加圖片放大顯示的功能
-                alert('點擊放大功能 - 您可以在這裡添加真實的圖片路徑');
-            });
-        });
+        
 
         // 滾動動畫效果
         window.addEventListener('scroll', function() {
