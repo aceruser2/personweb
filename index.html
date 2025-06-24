@@ -210,11 +210,18 @@
         </main>
     </div>
 
+    <!-- Lightbox 結構 -->
+    <div id="lightbox" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
+        <div style="position:relative; max-width:90vw; max-height:90vh;">
+            <img id="lightbox-img" src="" alt="" style="max-width:100%; max-height:80vh; display:block; margin:auto; border-radius:8px;"/>
+            <div id="lightbox-caption" style="color:#fff; text-align:center; margin-top:10px;"></div>
+            <button onclick="closeLightbox()" style="position:absolute; top:10px; right:10px; background:rgba(0,0,0,0.6); color:#fff; border:none; font-size:2rem; border-radius:50%; width:40px; height:40px; cursor:pointer;">&times;</button>
+        </div>
+    </div>
         
 </body>
 </html>
-<!-- partial -->
-  <script  src="./script.js"></script>
+<script  src="./script.js"></script>
 
 </body>
 </html>

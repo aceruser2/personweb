@@ -38,3 +38,26 @@ function showTab(tabName) {
             element.style.transform = 'translateY(30px)';
             element.style.transition = 'all 0.6s ease';
         });
+
+function openLightbox(imgUrl, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const cap = document.getElementById('lightbox-caption');
+    img.src = imgUrl;
+    img.alt = caption || '';
+    cap.textContent = caption || '';
+    lightbox.style.display = 'flex';
+    // 按 ESC 關閉
+    document.onkeydown = function(e) {
+        if (e.key === "Escape") closeLightbox();
+    };
+    // 點擊遮罩關閉
+    lightbox.onclick = function(e) {
+        if (e.target === lightbox) closeLightbox();
+    };
+}
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.onkeydown = null;
+    document.getElementById('lightbox').onclick = null;
+}
