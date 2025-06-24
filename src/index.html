@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔡宗翰 | 軟體開發工程師</title>
+   
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="profile-image">👨‍💻</div>
+                <h1 class="name">蔡宗翰</h1>
+                <p class="name-en">Cai Zong Han</p>
+                <p class="title">軟體開發工程師 | Software Developer</p>
+<!--                 <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>聯絡信箱</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>聯絡電話</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>💼</span>
+                        <span>LinkedIn</span>
+                    </div> -->
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <nav class="nav-tabs">
+                <div class="nav-tab active" onclick="showTab('about')">關於我</div>
+                <div class="nav-tab" onclick="showTab('experience')">工作經驗</div>
+                <div class="nav-tab" onclick="showTab('skills')">技能專長</div>
+                <div class="nav-tab" onclick="showTab('photos')">作品展示</div>
+                <div class="nav-tab" onclick="showTab('education')">學歷證照</div>
+            </nav>
+
+            <div id="about" class="tab-content active">
+                <div class="section">
+                    <h3>自我介紹</h3>
+                    <div class="experience-item">
+                        <p style="font-size: 1.1rem; line-height: 1.8;">
+                            畢業於能源領域，具備3年Python後端開發經驗以及2年Java開發經驗。
+                            熟悉Mac和Linux開發環境，專注於後端系統開發與優化。
+                            具備良好的問題解決能力和團隊合作精神，持續學習新技術以提升專業能力。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>專業亮點</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-years">5+</div>
+                            <div>年開發經驗</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-years">2</div>
+                            <div>主要程式語言</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-years">∞</div>
+                            <div>學習熱忱</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="experience" class="tab-content">
+                <div class="section">
+                    <h3>工作經驗</h3>
+                    <div class="experience-item">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">Python後端開發工程師</h4>
+                        <p style="color: #666; margin-bottom: 10px;">3年經驗</p>
+                        <p>負責後端系統架構設計與開發、微服務架構以及分散式系統設計，包括API設計、資料庫優化、系統效能調校等工作。</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">Java開發工程師</h4>
+                        <p style="color: #666; margin-bottom: 10px;">2年經驗</p>
+                        <p>參與企業級應用維運，使用Spring mvc框架。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="skills" class="tab-content">
+                <div class="section">
+                    <h3>技術技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🐍</div>
+                            <h4>Python</h4>
+                            <p>後端開發 3年</p>
+                        </div>
+                        <div class="skill-card">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">☕</div>
+                            <h4>Java</h4>
+                            <p>企業維運 2年</p>
+                        </div>
+                        <div class="skill-card">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🍎</div>
+                            <h4>macOS</h4>
+                            <p>主要開發環境</p>
+                        </div>
+                        <div class="skill-card">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🐧</div>
+                            <h4>Linux</h4>
+                            <p>伺服器管理</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div id="photos" class="tab-content">
+                <div class="section">
+                    <h3>攝影作品展示</h3>
+                    <p style="margin-bottom: 20px; color: #666;">以下是我的攝影作品集，點擊可以查看大圖</p>
+                    
+                    <!-- 分類選單 -->
+                    <div class="photo-categories">
+                        <button class="category-btn active" onclick="filterPhotos('all')">全部</button>
+                        <button class="category-btn" onclick="filterPhotos('landscape')">風景</button>
+                        <button class="category-btn" onclick="filterPhotos('sunset')">日出日落</button>
+                        <button class="category-btn" onclick="filterPhotos('city')">城市</button>
+                        <button class="category-btn" onclick="filterPhotos('nature')">自然</button>
+                        <button class="category-btn" onclick="filterPhotos('portrait')">人像</button>
+                        <button class="category-btn" onclick="filterPhotos('creative')">創意</button>
+                    </div>
+                    
+                    <div class="photo-gallery" id="photoGallery">
+                        <!-- 風景攝影 -->
+                        <div class="photo-item" data-category="landscape" onclick="openLightbox('https://aceruser2.github.io/personweb/images/landscape1.jpg', '風景攝影 1')">
+                            <img src="https://aceruser2.github.io/personweb/images/landscape1.jpg" alt="風景攝影" onerror="this.parentElement.innerHTML='<div class=photo-placeholder><div>📷</div><div>風景攝影</div><div style=font-size:0.8rem;color:#999;>請上傳 landscape1.jpg</div></div>'">
+                            <div class="photo-overlay">
+                                <div class="photo-title">風景攝影</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 日出日落 -->
+                        <div class="photo-item" data-category="sunset" onclick="openLightbox('https://aceruser2.github.io/personweb/images/sunset1.jpg', '日出日落 1')">
+                            <img src="https://aceruser2.github.io/personweb/images/sunset1.jpg" alt="日出日落" onerror="this.parentElement.innerHTML='<div class=photo-placeholder><div>🌅</div><div>日出日落</div><div style=font-size:0.8rem;color:#999;>請上傳 sunset1.jpg</div></div>'">
+                            <div class="photo-overlay">
+                                <div class="photo-title">日出日落</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 城市風光 -->
+                        <div class="photo-item" data-category="city" onclick="openLightbox('https://aceruser2.github.io/personweb/images/city1.jpg', '城市風光 1')">
+                            <img src="https://aceruser2.github.io/personweb/images/city1.jpg" alt="城市風光" onerror="this.parentElement.innerHTML='<div class=photo-placeholder><div>🏙️</div><div>城市風光</div><div style=font-size:0.8rem;color:#999;>請上傳 city1.jpg</div></div>'">
+                            <div class="photo-overlay">
+                                <div class="photo-title">城市風光</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 自然生態 -->
+                        <div class="photo-item" data-category="nature" onclick="openLightbox('https://aceruser2.github.io/personweb/images/nature1.jpg', '自然生態 1')">
+                            <img src="https://aceruser2.github.io/personweb/images/nature1.jpg" alt="自然生態" onerror="this.parentElement.innerHTML='<div class=photo-placeholder><div>🌸</div><div>自然生態</div><div style=font-size:0.8rem;color:#999;>請上傳 nature1.jpg</div></div>'">
+                            <div class="photo-overlay">
+                                <div class="photo-title">自然生態</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 人像攝影 -->
+                        <div class="photo-item" data-category="portrait" onclick="openLightbox('https://aceruser2.github.io/personweb/images/portrait1.jpg', '人像攝影 1')">
+                            <img src="https://aceruser2.github.io/personweb/images/portrait1.jpg" alt="人像攝影" onerror="this.parentElement.innerHTML='<div class=photo-placeholder><div>📸</div><div>人像攝影</div><div style=font-size:0.8rem;color:#999;>請上傳 portrait1.jpg</div></div>'">
+                            <div class="photo-overlay">
+                                <div class="photo-title">人像攝影</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 創意攝影 -->
+                        <div class="photo-item" data-category="creative" onclick="openLightbox('https://aceruser2.github.io/personweb/images/creative1.jpg', '創意攝影 1')">
+                            <img src="https://aceruser2.github.io/personweb/images/creative1.jpg" alt="創意攝影" onerror="this.parentElement.innerHTML='<div class=photo-placeholder><div>🎨</div><div>創意攝影</div><div style=font-size:0.8rem;color:#999;>請上傳 creative1.jpg</div></div>'">
+                            <div class="photo-overlay">
+                                <div class="photo-title">創意攝影</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div id="education" class="tab-content">
+                <div class="section">
+                    <h3>學歷背景</h3>
+                    <div class="experience-item">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">能源相關科系</h4>
+                        <p>具備能源領域專業知識背景</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>專業證照</h3>
+                    <div style="text-align: center;">
+                        <div class="certificate-badge">
+                            🏆 Linguaskill Business A2
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+        
+</body>
+</html>
