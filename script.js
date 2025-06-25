@@ -61,3 +61,18 @@ function closeLightbox() {
     document.onkeydown = null;
     document.getElementById('lightbox').onclick = null;
 }
+
+function filterPhotos(category) {
+    // 切換按鈕 active 樣式
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes("'" + category + "'"));
+    });
+    // 過濾圖片
+    document.querySelectorAll('.photo-item').forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
