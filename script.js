@@ -76,3 +76,27 @@ function filterPhotos(category) {
         }
     });
 }
+
+// Lazy load images using Intersection Observer
+document.addEventListener('DOMContentLoaded', function() {
+    const lazyImages = document.querySelectorAll('.photo-gallery img[data-src]');
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.getAttribute('data-src');
+                    img.removeAttribute('data-src');
+                    obs.unobserve(img);
+                }
+            });
+        }, { rootMargin: '100px' });
+        lazyImages.forEach(img => observer.observe(img));
+    } else {
+        // Fallback: load all images immediately
+        lazyImages.forEach(img => {
+            img.src = img.getAttribute('data-src');
+            img.removeAttribute('data-src');
+        });
+    }
+});
